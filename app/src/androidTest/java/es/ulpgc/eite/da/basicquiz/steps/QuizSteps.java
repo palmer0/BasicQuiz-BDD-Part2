@@ -88,17 +88,28 @@ public class QuizSteps {
     }
 
     /*
+
     @When("girar pantalla")
     public void girarPantalla() {
 
-        scenario.onActivity(activity -> {
-            activity.setRequestedOrientation(SCREEN_ORIENTATION_LANDSCAPE);
+        InstrumentationRegistry.getInstrumentation()
+            .getUiAutomation().executeShellCommand("settings put system accelerometer_rotation 0");
 
-            try {
-                Thread.sleep(500);
-            } catch (InterruptedException e) {
-            }
-        });
+        InstrumentationRegistry.getInstrumentation()
+            .getUiAutomation().executeShellCommand("settings put system user_rotation 1");
+
+        try {
+            Thread.sleep(500);
+        } catch (InterruptedException e) {
+        }
+
+        InstrumentationRegistry.getInstrumentation()
+            .getUiAutomation().executeShellCommand("settings put system user_rotation 0");
+
+        try {
+            Thread.sleep(500);
+        } catch (InterruptedException e) {
+        }
     }
     */
 

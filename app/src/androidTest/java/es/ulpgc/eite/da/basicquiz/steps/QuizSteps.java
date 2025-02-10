@@ -42,7 +42,8 @@ public class QuizSteps {
 
     @And("ocultar resultado")
     public void ocultarResultado() {
-        onView(withId(R.id.resultField)).check(matches(withText("???")));
+        //onView(withId(R.id.resultField)).check(matches(withText("???")));
+        onView(withId(R.id.resultField)).check(matches(withText(R.string.empty_text)));
     }
 
     @And("mostrar botones True y False y Cheat activados")
@@ -134,7 +135,8 @@ public class QuizSteps {
 
     @And("ocultar respuesta")
     public void ocultarRespuesta() {
-        onView(withId(R.id.answerField)).check(matches(withText("???")));
+        //onView(withId(R.id.answerField)).check(matches(withText("???")));
+        onView(withId(R.id.answerField)).check(matches(withText(R.string.empty_text)));
     }
 
     @And("mostrar botones Yes y No activados")
